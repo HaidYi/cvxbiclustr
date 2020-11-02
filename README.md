@@ -1,4 +1,4 @@
-# Accelerated Full Path Solution of Convex Biclustering
+# Accelerated Full Path Solution for Convex Biclustering
 
 This repo provides an accelerated solver implemented in C++ for convex biclustering, and generating row and column dendrogram is also supported. For more information about convex biclustering, see [1].  
 
