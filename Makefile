@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CC=g++
-CFLAGS=-O3 -std=c++11 -fopenmp
+CFLAGS=-O3 -std=c++11 -fopenmp -w
 LDFLAGS=-lcvxclustr -ligraph -lopenblas
 
 all: cvxclustr_path
