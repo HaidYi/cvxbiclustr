@@ -164,7 +164,7 @@ def run():
             'with non-zero code, please enable verbose mode in command line or '
             'refer to the cvxclustr_path output for error details.')
     
-    postprocess the output and generate the result json file
+    # postprocess the output and generate the result json file
     dictData = readMTXFile(intermiediate_outfile)
     
     row_dict, dictData = create_tree('row_memship', dictData)
