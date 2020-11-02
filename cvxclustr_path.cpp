@@ -245,12 +245,12 @@ int main(int argc, char **argv)
         cvxclustr(&param, &out, args.solver, args.max_iter, args.tol, args.lr, args.verbose);
        
         LOG_INFO("Writing Result ...");
-        // double_vector_fprintf(handler, out.u_sol, param.n * param.p);
+        double_vector_fprintf(handler, out.u_sol, param.n * param.p);
         
-        //fprintf(handler, "col_memship:\n");
-        //igraph_vector_fprint(&(out.col_memship), handler);
-        //fprintf(handler, "row_memship:\n");
-        //igraph_vector_fprint(&(out.row_memship), handler);        
+        fprintf(handler, "col_memship:\n");
+        igraph_vector_fprint(&(out.col_memship), handler);
+        fprintf(handler, "row_memship:\n");
+        igraph_vector_fprint(&(out.row_memship), handler);        
  
         // update parameters for next interation
         param_update(&param, &out);
