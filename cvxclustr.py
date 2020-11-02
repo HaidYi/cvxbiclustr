@@ -35,7 +35,6 @@ from os import devnull
 from sys import stderr, stdin, stdout
 from postprocessing import readMTXFile, create_tree
 
-EXP_PREFIX='/home/haidyi/result'
 
 # define constant vars
 CLUSTR_BIN_PATH = path_join(dirname(__file__), 'cvxclustr_path')
@@ -134,13 +133,11 @@ def run():
     
 
     # create tmp dir in case of cluttering file system
-    tmp_dir_path = mkdtemp(dir="/nas/longleaf/home/haidyi/proj/cvxclustr/data/result")
+    tmp_dir_path = mkdtemp()
     
     args.data = path_join(tmp_dir_path, 'data.mtx')
     mmwrite(args.data, data)
-    # mmwrite("/var/www/html/cvxclustr/data.mtx", data)
     intermiediate_outfile = path_join(tmp_dir_path, 'soln.mtx') 
-    # intermiediate_outfile = path_join("/var/www/html/cvxclustr/", "soln.mtx")
 
     # generate wts file when no explicit input
     if args.rgfile == '' and args.cgfile == '':
@@ -167,25 +164,24 @@ def run():
             'with non-zero code, please enable verbose mode in command line or '
             'refer to the cvxclustr_path output for error details.')
     
-    # postprocess the output and generate the result json file
-    # dictData = readMTXFile(intermiediate_outfile)
+    postprocess the output and generate the result json file
+    dictData = readMTXFile(intermiediate_outfile)
     
-    # row_dict, dictData = create_tree('row_memship', dictData)
-    # col_dict, dictData = create_tree('col_memship', dictData)
+    row_dict, dictData = create_tree('row_memship', dictData)
+    col_dict, dictData = create_tree('col_memship', dictData)
     
-    # dictionary ={  
-    #    "rowJSON" : row_dict,  
-    #    "colJSON" : col_dict,
-    #    "rowName" : row_name,
-    #    "colName" : col_name,
-    #    "matrix0" : data.tolist()
-    #}
+    dictionary ={  
+       "rowJSON" : row_dict,  
+       "colJSON" : col_dict,
+       "rowName" : row_name,
+       "colName" : col_name,
+       "matrix0" : data.tolist()
+    }
 
-    
-    #for gamma in dictData:
-    #    dictionary['matrix' + str(gamma)] = dictData[gamma]['heatmap'].tolist()
-    #with open(args.output, 'w') as out_jsfile:  
-    #    json.dump(dictionary, out_jsfile) 
+    for gamma in dictData:
+       dictionary['matrix' + str(gamma)] = dictData[gamma]['heatmap'].tolist()
+    with open(args.output, 'w') as out_jsfile:  
+       json.dump(dictionary, out_jsfile) 
     
 
 if __name__ == "__main__":
