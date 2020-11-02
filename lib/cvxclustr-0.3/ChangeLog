@@ -1,0 +1,7 @@
+2020-07-29 Haidong Yi <haidyi@cs.unc.edu>
+
+    * Finish the 0.1 version supporting fasta solver.
+
+2020-08-03 Haidong Yi <haidyi@cs.unc.edu>
+
+    * Finish the 0.2 version adding pgd solver.

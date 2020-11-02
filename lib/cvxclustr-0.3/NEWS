@@ -1,0 +1,10 @@
+* What is covered in 0.1 version:
+
+** both support convex clustering and convex bi-clustering
+
+** fasta is implemented as the default solver:
+    - openmp will be enabled if available
+
+* What is covered in 0.2 version:
+
+** both fasta solver and project gradient solver are supported.
