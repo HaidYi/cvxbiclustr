@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 '''
 A python wrapper for convex (bi)-clustering binary that makes it easier to use
