@@ -6,7 +6,7 @@ This repo provides an accelerated solver implemented in C++ for convex bicluster
 
 ## Installation
 
-Currently, we only support compiling the source code on Linux or MacOS. 
+Currently, we only support compiling the source code on Linux or MacOS. For the step-by-step installation in an empty environment, please refer to `docker/Dockerfile`.
 
 ### Prerequisite
 
@@ -14,6 +14,7 @@ Currently, we only support compiling the source code on Linux or MacOS.
 2. make
 3. autotools (autoconf, automake, libtool)
 4. python3
+5. openblas and igraph
 
 ### Install the python package needed
 
