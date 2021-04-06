@@ -1,6 +1,6 @@
 # Accelerated Full Path Solution for Convex Biclustering
 
-This repo provides an accelerated solver implemented in C++ for convex biclustering, and generating row and column dendrogram is also supported. For more information about convex biclustering, see [1].  
+This repo provides an accelerated solver implemented in C++ for convex biclustering, and generating row and column dendrogram is also supported. The source code and test data can be also found at https://zenodo.org/record/4620218#.YGx9jxNKiX0. For more information about convex biclustering, see [1].  
 
 ---
 
