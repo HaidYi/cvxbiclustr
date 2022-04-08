@@ -91,7 +91,7 @@ python3 cvxclustr.py --gamma 3,5,10,20,50,100,150,200,500,1000 --col_knn 2 --row
 <img align="middle" src="./assets/dynamic_clustering.gif" alt="COBRAC Demo" width="800" height="600" />
 </p>
 
-Besides the standalone implementation, we also provide a online server at http://cvxbiclustr.org for users to run some other interesting examples or run the algorithm on their own datasets. For more information about using the online server, see http://cvxbiclustr.org/help.php.
+Besides the standalone implementation, we also provide a online server at https://cvxbiclustr.ericchi.com/ for users to run some other interesting examples or run the algorithm on their own datasets. For more information about using the online server, see https://cvxbiclustr.ericchi.com/help.php.
 
 
 ## References
