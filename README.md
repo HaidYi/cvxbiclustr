@@ -95,7 +95,8 @@ Besides the standalone implementation, we also provide a online server at https:
 
 
 ## References
+[1] Haidong Yi, Le Huang, Gal Mishne, Eric C Chi, "COBRAC: a fast implementation of convex biclustering with compression", Bioinformatics, Volume 37, Issue 20, 15 October 2021, Pages 3667–3669, https://doi.org/10.1093/bioinformatics/btab248
+[2] Chi, Eric C., Genevera I. Allen, and Richard G. Baraniuk. "Convex biclustering." Biometrics 73.1 (2017): 10-19.
 
-[1] Chi, Eric C., Genevera I. Allen, and Richard G. Baraniuk. "Convex biclustering." Biometrics 73.1 (2017): 10-19.
 
 
