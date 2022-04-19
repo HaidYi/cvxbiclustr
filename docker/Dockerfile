@@ -49,4 +49,4 @@ ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 RUN make
 
 # CMD
-CMD ["python3 cvxclustr.py --gamma 3,5,10,20,50,100,150,200,500,1000 --col_knn 2 --row_knn 4 --tol 0.001 --data data/president.csv --output data/president.json"]
+CMD ["python3", "cvxclustr.py", "--gamma", "3,5,10,20,50,100,150,200,500,1000", "--col_knn", "2", "--row_knn", "4", "--tol", "0.001", "--data", "data/president.csv", "--output", "data/president.json"]
